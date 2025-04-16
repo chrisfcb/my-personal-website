@@ -1,0 +1,40 @@
+// src/components/Portfolio.tsx
+import ProjectCard from './ProjectCard';
+
+const Portfolio = () => {
+  const projects = [
+    { 
+        id: 1, 
+        title: 'Proxy Server', 
+        description: 'Developed parts of a proxy server that converts data between XML format and a binary format.', 
+        tools: 'Tools: C, Valgrind, NetCat, XML.',
+        link: 'https://github.com/chrisfcb/ProxyServer' 
+    },
+    { 
+        id: 2, 
+        title: 'Regression Model', 
+        description: 'Used exploratory data analysis and feature selection to create a regression model that predicts the travel time for a taxi ride in New York.', 
+        tools: 'Tools: Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook.',
+        link: 'https://colab.research.google.com/drive/1jtGsctra9m9HfvZudMhYy3Z7v9dcWa3d?usp=sharing' 
+    },
+    { 
+        id: 3, 
+        title: 'Domain-Specific Programming Language', 
+        description: 'Participated in a group project to develop a domain-specific programming language for drones.', 
+        tools: 'Tools: Java, ANTLR, Gradle, GIT, GitHub.',
+        link: 'https://github.com/chrisfcb/Domain-Specific-Language' 
+    }
+];
+
+  return (
+    <section id="portfolio" className="p-10">
+      <h2 className="text-3xl font-semibold text-white">My Projects</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+        {projects.map((project) => (
+          <ProjectCard key={project.id} title={project.title} tools={project.tools} description={project.description} link={project.link} />
+        ))}
+      </div>
+    </section>
+  );
+};
+export default Portfolio;

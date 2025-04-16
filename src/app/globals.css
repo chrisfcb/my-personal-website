@@ -24,4 +24,13 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  section {
+    scroll-margin-top: 64px; /* Height of your navbar */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
 }

@@ -2,14 +2,20 @@
 
 import { useState } from "react";
 import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState({ name: "", email: "", message: "" });
   const [success, setSuccess] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleCaptchaChange = (token: string | null) => {
+    setCaptchaToken(token);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,24 +25,23 @@ const Contact = () => {
     if (!formData.name) newErrors.name = "Name is required.";
     if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Valid email is required.";
     if (!formData.message) newErrors.message = "Message is required.";
+    if (!captchaToken) newErrors.message = "Please complete the CAPTCHA.";
 
     setErrors(newErrors);
 
     if (!newErrors.name && !newErrors.email && !newErrors.message) {
-      // Initialize emailjs with the correct method
-      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
-
-      // Call email service here
       emailjs
         .send(
           process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
           process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
-          formData,
+          { ...formData, "g-recaptcha-response": captchaToken },
           process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
         )
         .then(() => {
           console.log("Form submitted:", formData);
           setSuccess(true);
+          setFormData({ name: "", email: "", message: "" }); // Reset form
+          setCaptchaToken(null); // Reset CAPTCHA
         })
         .catch((error) => {
           console.error("Failed to send email:", error);
@@ -88,6 +93,13 @@ const Contact = () => {
               placeholder="Your Message"
             ></textarea>
             {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
+          </div>
+          <div>
+            <ReCAPTCHA
+              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+              onChange={handleCaptchaChange}
+            />
+            {!captchaToken && <p className="text-red-500 text-sm">Please complete the CAPTCHA.</p>}
           </div>
           <button type="submit" className="bg-orange-500 text-white px-5 py-2 rounded">Send Message</button>
         </form>

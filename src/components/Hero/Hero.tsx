@@ -27,7 +27,7 @@ const Hero = () => {
             {/* Container for hero section content */}
             <div className="flex-1 text-center"> {/* Allow text to take remaining space */}
                 {/* Heading */}
-                <h1 className="text-5xl font-bold">Hi, I'm Chris</h1>
+                <h1 className="text-5xl font-bold">Hi, I'm Philip (aka Chris)</h1>
                 {/* Sub-heading or description with typing effect */}
                 <p className="mt-4 text-lg">{displayText}</p>
                 {/* Call-to-action button */}

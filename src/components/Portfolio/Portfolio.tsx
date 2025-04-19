@@ -38,3 +38,5 @@ const Portfolio = () => {
   );
 };
 export default Portfolio;
+
+// TODO: Make a component for contact form and add it to the page

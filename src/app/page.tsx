@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import Portfolio from '../components/Portfolio';
-import Hero from '../components/Hero';
-import About from '@/components/About';
-import Timeline from '@/components/Timeline';
+import Portfolio from '../components/Portfolio/Portfolio';
+import Hero from '../components/Hero/Hero';
+import About from '@/components/About/About';
+import Timeline from '@/components/Timeline/Timeline';
+import Contact from '@/components/Contact/Contact';
 
 
 // Example of a simple homepage layout in Next.js with Tailwind CSS
@@ -18,20 +19,11 @@ export default function Home() {
         {/* About Me Section */}
         <About />  
 
-        {/* About Me Section */}
+        {/* Timeline Section */}
         <Timeline />   
 
-  
         {/* Contact Section */}
-        <section id="contact" className="p-10">
-          <h2 className="text-3xl font-semibold">Contact Me</h2>
-          <form className="mt-6 space-y-4">
-            <input type="text" className="w-full p-2 border" placeholder="Your Name" />
-            <input type="email" className="w-full p-2 border" placeholder="Your Email" />
-            <textarea className="w-full p-2 border" placeholder="Your Message"></textarea>
-            <button className="bg-orange-500 text-white px-5 py-2 rounded">Send Message</button>
-          </form>
-        </section>
+        <Contact />
   
         {/* Footer */}
         <footer className="bg-gray-900 text-white p-6 text-center">

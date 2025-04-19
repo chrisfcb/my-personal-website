@@ -6,19 +6,19 @@ const Timeline = () => {
             date: "February 2024 – June 2024",
             title: "Korea University, Exchange UiO",
             description: "Completed an exchange semester in Seoul. Studied various subjects in Computer Science with good results.",
-            image: "/korea_university.jpg" // Add the appropriate image path
+            image: "/korea_university.jpg" 
         },
         {
             date: "August 2022 – Present",
             title: "University of Oslo",
             description: "Bachelor’s degree in Informatics: Programming and System Architecture. Expected graduation in June 2025.",
-            image: "/university_oslo.jpg" // Add the appropriate image path
+            image: "/university_oslo.jpg" 
         },
         {
             date: "August 2021 – December 2021",
             title: "NLA Høgskolen/Kulturakademiet Oslo International School of Philosophy",
             description: "Studied Exphil, Exfac, and the history of ideas in Rome.",
-            image: "/nla_hogskolen.jpg" // Add the appropriate image path
+            image: "/nla_hogskolen.jpg" 
         }
     ];
     

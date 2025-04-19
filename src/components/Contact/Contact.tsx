@@ -1,6 +1,7 @@
 "use client";
 
-import { use, useState } from "react";
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -22,9 +23,24 @@ const Contact = () => {
     setErrors(newErrors);
 
     if (!newErrors.name && !newErrors.email && !newErrors.message) {
+      // Initialize emailjs with the correct method
+      emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "");
+
       // Call email service here
-      console.log("Form submitted:", formData);
-      setSuccess(true);
+      emailjs
+        .send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "",
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "",
+          formData,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ""
+        )
+        .then(() => {
+          console.log("Form submitted:", formData);
+          setSuccess(true);
+        })
+        .catch((error) => {
+          console.error("Failed to send email:", error);
+        });
     }
   };
 

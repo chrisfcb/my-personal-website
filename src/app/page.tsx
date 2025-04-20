@@ -3,6 +3,7 @@ import Hero from '../components/Hero/Hero';
 import About from '@/components/About/About';
 import Timeline from '@/components/Timeline/Timeline';
 import Contact from '@/components/Contact/Contact';
+import Footer from '@/components/common/Footer';
 
 // Example of a simple homepage layout in Next.js with Tailwind CSS
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
 
         {/* Contact Section */}
         <Contact />
+
+        {/* Footer Section */}
+        <Footer />
       </div>
     );
   }

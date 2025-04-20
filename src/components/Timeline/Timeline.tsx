@@ -21,31 +21,32 @@ const Timeline = () => {
             image: "/nla_hogskolen.jpg" 
         }
     ];
-    
 
-  return (
-          <section id="timeline" className="container mx-auto py-16 px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">Education</h2>
-          <div className="space-y-12">
-            {timelineEvents.map((event, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-center gap-8 group">
-                <div className="w-full md:w-1/2 transform transition-transform duration-300 group-hover:scale-105">
-                  <img
-                    src={event.image}
-                    alt={event.title}
-                    className="rounded-lg shadow-lg w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-full md:w-1/2 space-y-4">
-                  <div className="text-orange-500 font-semibold">{event.date}</div>
-                  <h3 className="text-2xl font-bold text-white-800">{event.title}</h3>
-                  <p className="text-white-600">{event.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+    return (
+        <section id="timeline" className="container mx-auto py-16 px-4">
+            <h2 className="text-3xl font-bold text-center mb-12 text-white">Education</h2>
+            <div className="space-y-12">
+                {timelineEvents.map((event, index) => (
+                    <div key={index} className="flex flex-col md:flex-row items-center gap-8 group">
+                        <div className="w-full md:w-1/2 transform transition-transform duration-300 group-hover:scale-105">
+                            <Image
+                                src={event.image}
+                                alt={event.title}
+                                width={500} // Set a fixed width
+                                height={300} // Set a fixed height
+                                className="rounded-lg shadow-lg object-cover"
+                            />
+                        </div>
+                        <div className="w-full md:w-1/2 space-y-4">
+                            <div className="text-orange-500 font-semibold">{event.date}</div>
+                            <h3 className="text-2xl font-bold text-white-800">{event.title}</h3>
+                            <p className="text-white-600">{event.description}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </section>
-  );
+    );
 };
 
 export default Timeline;

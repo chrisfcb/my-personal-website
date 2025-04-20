@@ -3,10 +3,10 @@ const About = () => {
         <section id="about" className="bg-gray-100 p-10">
           <h2 className="text-3xl font-semibold text-black">About Me</h2>
           <p className="mt-4 text-black">
-          Hello! I'm an ambitious and hardworking third-year student studying 
-          Informatics: Programming and System Architecture bachelor at the University of Oslo. 
-          I am always eager to explore new technologies and ways to 
-          develop contructive digital solutions. 
+            Hello! I&#39;m an ambitious and hardworking third-year student studying 
+            Informatics: Programming and System Architecture bachelor at the University of Oslo. 
+            I am always eager to explore new technologies and ways to 
+            develop constructive digital solutions. 
           </p>
           <p className="mt-4 text-black">
           Here are some of my technical skills:

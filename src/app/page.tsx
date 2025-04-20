@@ -22,11 +22,6 @@ export default function Home() {
 
         {/* Contact Section */}
         <Contact />
-  
-        {/* Footer */}
-        <footer className="bg-gray-900 text-white p-6 text-center">
-          <p>&copy; 2024 Chris. All rights reserved.</p>
-        </footer>
       </div>
     );
   }

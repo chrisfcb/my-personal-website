@@ -1,4 +1,4 @@
-import { FaCode, FaHtml5, FaCss3, FaReact, FaDatabase, FaTools, FaUsers } from 'react-icons/fa';
+import { FaCode, FaHtml5, FaDatabase, FaTools, FaUsers } from 'react-icons/fa';
 
 const About = () => {
     return (

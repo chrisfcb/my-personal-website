@@ -16,7 +16,7 @@ const Portfolio = () => {
         description: 'Developed parts of a proxy server that converts data between XML format and a binary format.',
         tools: 'Tools: C, Valgrind, NetCat, XML.',
         link: 'https://github.com/chrisfcb/ProxyServer',
-        status: 'finished' // Mark as finished
+        status: 'finished' 
     },
     { 
         id: 2, 
@@ -24,7 +24,7 @@ const Portfolio = () => {
         description: 'Used exploratory data analysis and feature selection to create a regression model that predicts the travel time for a taxi ride in New York.', 
         tools: 'Tools: Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook.',
         link: 'https://colab.research.google.com/drive/1jtGsctra9m9HfvZudMhYy3Z7v9dcWa3d?usp=sharing',
-        status: 'finished' // Mark as finished
+        status: 'finished' 
     },
     { 
         id: 3, 
@@ -32,7 +32,7 @@ const Portfolio = () => {
         description: 'Participated in a group project to develop a domain-specific programming language for drones.',
         tools: 'Tools: Java, ANTLR, Gradle, GitHub.',
         link: 'https://github.com/chrisfcb/Domain-Specific-Language',
-        status: 'finished' // Mark as finished
+        status: 'finished' 
     },
     { 
       id: 4, 
@@ -40,7 +40,7 @@ const Portfolio = () => {
       description: 'Developed a self-driving car simulation using reinforcement learning techniques.',
       tools: 'Tools: JavaScript, CSS, HTML.',
       link: 'https://github.com/chrisfcb/Self-Driving-Car',
-      status: 'finished' // Mark as finished
+      status: 'finished' 
    },
     { 
       id: 5, 
@@ -48,14 +48,14 @@ const Portfolio = () => {
       description: 'This portfolio website is built using React and Next.js.', 
       tools: 'Tools: React, Next.js, Tailwind CSS.',
       link: 'https://github.com/chrisfcb/my-personal-website',
-      status: 'finished' // Mark as finished
+      status: 'finished' 
     }, 
     { 
       id: 6, 
       title: 'AI weather app',
       description: 'University project where I am working in a team of six to develop an AI powered weather app - currently in progress.',
       tools: 'Tools: Kotlin, Jetpack, Android Studio, openAI and MET API, GitHub.',
-      status: 'in-progress' // Mark as in-progress
+      status: 'in-progress' 
     }
   ];
 
@@ -70,7 +70,7 @@ const Portfolio = () => {
             tools={project.tools} 
             description={project.description} 
             link={project.link} 
-            status={project.status} // Pass the status to ProjectCard
+            status={project.status} 
           />
         ))}
       </div>

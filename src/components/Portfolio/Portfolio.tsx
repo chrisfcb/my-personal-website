@@ -8,21 +8,42 @@ const Portfolio = () => {
         title: 'Proxy Server', 
         description: 'Developed parts of a proxy server that converts data between XML format and a binary format.', 
         tools: 'Tools: C, Valgrind, NetCat, XML.',
-        link: 'https://github.com/chrisfcb/ProxyServer' 
+        link: 'https://github.com/chrisfcb/ProxyServer'
     },
     { 
         id: 2, 
         title: 'Regression Model', 
         description: 'Used exploratory data analysis and feature selection to create a regression model that predicts the travel time for a taxi ride in New York.', 
         tools: 'Tools: Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook.',
-        link: 'https://colab.research.google.com/drive/1jtGsctra9m9HfvZudMhYy3Z7v9dcWa3d?usp=sharing' 
+        link: 'https://colab.research.google.com/drive/1jtGsctra9m9HfvZudMhYy3Z7v9dcWa3d?usp=sharing'
     },
     { 
         id: 3, 
         title: 'Domain-Specific Programming Language', 
         description: 'Participated in a group project to develop a domain-specific programming language for drones.', 
-        tools: 'Tools: Java, ANTLR, Gradle, GIT, GitHub.',
-        link: 'https://github.com/chrisfcb/Domain-Specific-Language' 
+        tools: 'Tools: Java, ANTLR, Gradle, GitHub.',
+        link: 'https://github.com/chrisfcb/Domain-Specific-Language'
+    },
+    { 
+      id: 4, 
+      title: 'Self-Driving Car Simulation',
+      description: 'Developed a self-driving car simulation using reinforcement learning techniques.',
+      tools: 'Tools: JavaScript, CSS, HTML.',
+      link: 'https://github.com/chrisfcb/Self-Driving-Car'
+   },
+    { 
+      id: 5, 
+      title: 'AI weather app',
+      description: 'University project where I am working in a team of six to develop an AI powered weather app - currently in progress.',
+      tools: 'Tools: Kotlin, Jetpack, Android Studio, openAI and MET API, GitHub.',
+      link: 'Project under porgress'
+    }, 
+    { 
+      id: 6, 
+      title: 'Portfolio Website',
+      description: 'This portfolio website is built using React and Next.js.', 
+      tools: 'Tools: React, Next.js, Tailwind CSS.',
+      link: 'https://github.com/chrisfcb/my-personal-website'
     }
 ];
 
@@ -38,5 +59,3 @@ const Portfolio = () => {
   );
 };
 export default Portfolio;
-
-// TODO: Make a component for contact form and add it to the page

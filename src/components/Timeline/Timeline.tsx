@@ -12,7 +12,7 @@ const Timeline = () => {
             date: "August 2022 – Present",
             title: "University of Oslo",
             description: "Bachelor’s degree in Informatics: Programming and System Architecture. Expected graduation in June 2025.",
-            image: "/university_oslo.jpg" 
+            image: "/uni_oslo.jpg" 
         },
         {
             date: "August 2021 – December 2021",
